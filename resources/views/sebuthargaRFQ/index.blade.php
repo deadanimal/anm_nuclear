@@ -27,12 +27,18 @@
                     </div>
                 </div>
 
+
                 <div class="row mt-2">
                     <div class="col-lg-4 p-0">
-                        <label class="col-form-label"> NO. PERMOHONAN:       NM/RQ/ </label>
+                        <label class="col-form-label"> NO. PERMOHONAN:</label>
                     </div>
-                    <div class="col-lg-8">
-                        <input class="form-control" name="no_permohonan" id="no_permohonan">
+                    <div class="col-lg-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">NM/RQ/</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <input class="form-control" name="no_permohonan" id="no_permohonan" aria-describedby="basic-addon3">
                     </div>
                 </div>
 
@@ -66,36 +72,43 @@
     </div>
 
     <div id="2step" style="display: none;" >
-        <div class=" mt-3" >
+        <div class=" mt-3 justify-content-center" >
             <div class="row card">
                 <div class="card-body mt-2">
+                <div class=" row mt-3 justify-content-center" >
                     <div class="col-2">
                         <label class="col-form-label"> NO. RFQ:</label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <input class="form-control" name="no_rfq" id="no_rfq" disabled="true">
                     </div>
-            
+                </div>
+                <div class=" row mt-3 justify-content-center" >
                     <div class="col-2 ">
                         <label class="col-form-label">NAMA PELANGGAN:</label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <input class="form-control" name="nama_pelanggan2" id="nama_pelanggan2"  disabled="true">
                     </div>
+                </div>
+                <div class=" row mt-3 justify-content-center" >
                     <div class="col-2 ">
                         <label class="col-form-label">ALAMAT PELANGGAN:</label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <input class="form-control" name="alamat_pelanggan" id="alamat_pelanggan" style="height:100px"  disabled="true">
                     </div>
+                </div>
+                <div class=" row mt-3 justify-content-center" >
                     <div class="col-2 ">
                         <label class="col-form-label">EMEL :</label>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6">
                         <input class="form-control" name="emel" id="emel"  disabled="true">
                     </div>
                 </div>
-            </div>  
+                </div>
+            </div>
         </div>
 
         <div class="mt-3">
@@ -144,6 +157,14 @@
         </div>
     </div>
 
+    <div id="stepakhir" style="display: none;">
+        <h5 >NO. SEBUTHARGA :   NM/QUO/ <input style="border:0;" name="nama_pelanggan_step2"></input> </h5>
+        <div id="penampalan"></div>
+        <div class="justify-content-center">
+            <a class="btn btn-sm btn-primary" onclick="sweetAlit()">JANA SEBUTHARGA</a>
+        </div>
+    </div>
+
     <div id="anjaystep" style="display:none;">
         <form action="#">
             <div class="row mt-3 justify-content-center">
@@ -180,7 +201,7 @@
                 </div>
             </div>
             <div class="row col-sm-4 mt-3 ">
-                <button class="btn btn-sm btn-primary" type="button" onclick="updateDB()" style="width:130px;"> 
+                <button class="btn btn-sm btn-primary" type="button" onclick="updateDB()" style="width:130px;">
                     <i class="fas fa-plus"></i> TAMBAH
                 </button>
                 <button class="btn btn-sm btn-primary ml-2" type="button" onclick="step2()" style="width:130px;">
@@ -190,99 +211,73 @@
         </form>
     </div>
 
-    <div id="stepakhir" style="display: none;">
-        <div id="penampalan"></div>
-        
-        <a class="btn btn-sm btn-primary" onclick="sweetAlit()">Hantar Permohonan</a>
-    </div>
 
     <div id="3step" style="display: none;">
-        <div class="row justify-content-lg-center mt-3" >
-            <div class="row mt-4" >
-                <div class="">
-                    <a  class="btn btn-primary" type="button" onclick="stepplus()">
-                        <i class="fas fa-plus"></i> TAMBAH
-                    </a>
-                </div>
-                <div class="row mt-3 justify-content-center">
-                    <div class="card" id="target_table">
-                        <div id="item_added_table" class="card-body p-2">
-                            <table id="infoTable2" class="table table-fixed table-condensed">
-                                <thead>
-                                <tr>
-                                    <th class="col-xs-1">BIL.</th>
-                                    <th class="col-xs-3">KHIDMAT/PRODUK</th>
-                                    <th class="col-xs-6">AMAUN</th>
-                                    <th class="col-xs-6">JUMLAH</th>
+        <div class="row mt-4" >
+            <div class="">
+                <a  class="btn btn-primary" type="button" onclick="stepplus()">
+                    <i class="fas fa-plus"></i> TAMBAH
+                </a>
+        </div>
+        <div class="row mt-3 justify-content-center">
+                <div class="card" id="target_table">
+                    <div id="item_added_table" class="card-body p-2">
+                        <table id="infoTable2" class="table table-fixed table-condensed">
+                            <thead>
+                            <tr>
+                                <th class="col-xs-1">BIL.</th>
+                                <th class="col-xs-3">KHIDMAT/PRODUK</th>
+                                <th class="col-xs-6">AMAUN</th>
+                                <th class="col-xs-6">JUMLAH</th>
 
-                                </tr>
-                                </thead>
-                                <tbody id="tbody3">
-                                </tbody>
-                            </table>
-                        
-                        </div>
+                            </tr>
+                            </thead>
+                            <tbody id="tbody3">
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="row justify-content-right">
+                    <div class="col-6"></div>
+                    <div class="col-2 text-right">JUMLAH</div>
+                    <div class="col-4">
+                        <input class="form-control" id="jumlah" value="" readonly>
                     </div>
                 </div>
-                <div class="row mt-4" >
-                <div class="">
-                    <a  class="btn btn-primary" type="button" onclick="steplast()">
-                        <i class="fas fa-search"></i> SETERUSNYA
-                    </a>
                 </div>
-            </div>  
+        </div>
+        <div class="row mt-4" >
+            <div class="">
+                <a  class="btn btn-primary" type="button" onclick="steplast()">
+                    <i class="fas fa-search"></i> SETERUSNYA
+                </a>
+            </div>
         </div>
     </div>
 
-
-    <!-- <div class="row mt-4">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <table class="table datatable table-striped" style="width:100%">
-                        <thead class="bg-200">
-                            <tr>
-                                <th class="sort">BIL.</th>
-                                <th class="sort">KOD NAMA KURSUS</th>
-                                <th class="sort">NAMA KURSUS</th>
-                                <th class="sort">TARIKH KURSUS</th>
-                                <th class="sort">TEMPAT KURSUS</th>
-                                <th class="sort">BILANGAN PESERTA</th>
-                                <th class="sort">STATUS PELAKSANAAN</th>
-                                <th class="sort">TINDAKAN</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white" id="t_normal">
-                            
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <script type="text/javascript">
 
-var aca_option = 
-        `<option value="ACA" >ACA - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">ACA - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">ACA - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">ACA - MAKMAL BIOTEST</option>`;
-    var alurtron_option = 
-        `<option value="ACA" >ALURTRON - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">ALURTRON - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">ALURTRON - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">ALURTRON - MAKMAL BIOTEST</option>`;
-    var biodose_option =  
-        `<option value="ACA" >BIODOSE - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">BIODOSE - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">BIODOSE - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">BIODOSE - MAKMAL BIOTEST</option>`;
-    var biotest_option =  
-        `<option value="ACA" >BIOTEST - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">BIOTEST - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">BIOTEST - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">BIOTEST - MAKMAL BIOTEST</option>`;
+var aca_option =
+        `<option value="ACA" >ACA - TS-1000-10</option>
+        <option value="ALURTRON">ACA - TS-1000-4</option>
+        <option value="BIODOSE">ACA - XLPE</option>
+        <option value="BIOTEST">ACA - TS-1000-2</option>`;
+    var alurtron_option =
+        `<option value="ACA" >ALURTRON - TS-1000-10</option>
+        <option value="ALURTRON">ALURTRON - TS-1000-4</option>
+        <option value="BIODOSE">ALURTRON - XLPE</option>
+        <option value="BIOTEST">ALURTRON - TS-1000-2</option>`;
+    var biodose_option =
+        `<option value="ACA" >BIODOSE - TS-1000-10</option>
+        <option value="ALURTRON">BIODOSE - TS-1000-4</option>
+        <option value="BIODOSE">BIODOSE - XLPE</option>
+        <option value="BIOTEST">BIODOSE - TS-1000-2</option>`;
+    var biotest_option =
+        `<option value="ACA" >BIOTEST - TS-1000-10</option>
+        <option value="ALURTRON">BIOTEST - TS-1000-4</option>
+        <option value="BIODOSE">BIOTEST - XLPE</option>
+        <option value="BIOTEST">BIOTEST - TS-1000-2</option>`;
 
     // option table
 
@@ -300,8 +295,8 @@ var aca_option =
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">1.</td>
-                            <td class="col-xs-3" name="NamaProduk">TS-1000-10</td>
-                            <td class="col-xs-6">0.12/meter </td>
+                            <td class="col-xs-3" ><input hidden="true" name="NamaProduk" value="TS-1000-10">TS-1000-10</td>
+                            <td class="col-xs-6"><input hidden="true" name="AmaunProduk" value="0.12">0.12/meter </td>
                             <td class="col-xs-6">Outer Diameter: 6.4mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
 
@@ -321,8 +316,8 @@ var aca_option =
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">2.</td>
-                            <td class="col-xs-3" name="NamaProduk">TS-1000-4</td>
-                            <td class="col-xs-6">0.14/meter </td>
+                            <td class="col-xs-3" ><input hidden="true" name="NamaProduk" value="TS-1000-4">TS-1000-4</td>
+                            <td class="col-xs-6"><input hidden="true" name="AmaunProduk" value="0.14">0.14/meter </td>
                             <td class="col-xs-6">Outer Diameter: 9.5mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
                         </tr>
@@ -341,8 +336,8 @@ var aca_option =
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">3.</td>
-                            <td class="col-xs-3" name="NamaProduk">XLPE</td>
-                            <td class="col-xs-6">0.16/meter </td>
+                            <td class="col-xs-3"><input hidden="true" name="NamaProduk" value="XLPE">XLPE</td>
+                            <td class="col-xs-6"><input hidden="true" name="AmaunProduk" value="0.16">0.16/meter </td>
                             <td class="col-xs-6">Hot Water Pipe: 10mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
                         </tr>
@@ -361,8 +356,8 @@ var aca_option =
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">1.</td>
-                            <td class="col-xs-3" ><input name="NamaProduk" disabled="true" value="TS-1000-10"></td>
-                            <td class="col-xs-6"><input name="AmaunProduk" disabled="true" value="0.12">/meter</td>
+                            <td class="col-xs-3" ><input name="NamaProduk" style="border:0;" disabled="true" hidden="true" value="TS-1000-10">TS-1000-2</td>
+                            <td class="col-xs-6"><input name="AmaunProduk" disabled="true" hidden="true" value="0.12">0.12/meter</td>
                             <td class="col-xs-6">Outer Diameter: 6.4mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
                         </tr>
@@ -381,9 +376,9 @@ var aca_option =
                 url: '/sebutharga/'+ $data,
                 success: function(res){
                     console.log("get all RFQ",res)
-                    
+
                     let table_data = "";
-                    // let jumlah = 0;
+                    let jumlah = 0;
                     for(let i=0; i<res.length; i++) {
                         table_data = table_data + `<tr class="clickableRow" onclick="step1()">
                             <td class="col-xs-3" >${i+1}</td>
@@ -392,10 +387,10 @@ var aca_option =
                             <td class="col-xs-3" >${res[i].created_at.slice(0,10)}</td>
                         </tr>`;
 
-                    //     jumlah = jumlah + res[i].KuantitiProduk * res[i].AmaunProduk;
+                        jumlah = jumlah + res[i].KuantitiProduk * res[i].AmaunProduk;
                     // }
 
-                    // $("#jumlah").val(jumlah);
+                    $("#jumlah").val(jumlah);
                     $("#item_added_table").show();
                     $("#tbody2").html(table_data);
                     }
@@ -403,7 +398,7 @@ var aca_option =
             })
 
         }
-        
+
         function step1() {
             $("#2step").show();
             $("#1step").hide();
@@ -412,7 +407,7 @@ var aca_option =
         function step2() {
             $("#3step").show();
             $("#anjaystep").hide();
-            $("#2step").hide(); 
+            $("#2step").hide();
             $.ajax({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -436,7 +431,7 @@ var aca_option =
 
                         $("#jumlah").val(jumlah);
                         $("#tbody3").html(table_data2);
-                        
+
                     }
             })
         }
@@ -447,9 +442,12 @@ var aca_option =
         }
 
         function steplast() {
+
+            $("input[name=nama_pelanggan_step2]").val($data)
             $("#penampalan").html($("#target_table"));
             $("#stepakhir").show();
             $("#anjaystep").hide();
+            $("#3step").hide();
         }
 
         function updateSecondOption() {
@@ -469,7 +467,7 @@ var aca_option =
             if (selected == "BIOTEST") {
                 $("#second_option").html(biotest_option);
             }
-            
+
 
         }
 
@@ -490,7 +488,7 @@ var aca_option =
             if (selected == "BIOTEST") {
                 $("#second_table").html(biotest_table);
             }
-            
+
 
         }
 
@@ -537,12 +535,12 @@ var aca_option =
 
                             $("#jumlah").val(jumlah);
                             $("#tbody3").html(table_data2);
-                            
+
                         }
                     })
 
                     step2();
-                    
+
                 }
             })
         }

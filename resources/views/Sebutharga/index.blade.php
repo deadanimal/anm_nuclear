@@ -171,7 +171,14 @@
                         <tbody id="tbody2">
                         </tbody>
                     </table>
-                <input class="form-control" id="jumlah" value="" readonly>
+
+                <div class="row justify-content-right">
+                    <div class="col-6"></div>
+                    <div class="col-2 text-right">JUMLAH</div>
+                    <div class="col-4">
+                        <input class="form-control" id="jumlah" value="" readonly>
+                    </div>
+                </div>
             </div>
         </div>
             </div>
@@ -220,10 +227,15 @@
     </div>
 
     <div id="permohonan_step4" style="display: none;">
+        <h5 >NO. SEBUTHARGA : <h5 name="nama_pelanggan_step2"></h5> </h5>
         <div id="penampalan"></div>
+        <label class="col-form-label mt-3">CATATAN :</label>
         <textarea name="catatanAttachment" class="form-control" id="" disable="true" rows="3"></textarea>
         <!-- <input name="catatanAttachment" value=""> -->
-        <a class="btn btn-sm btn-primary" onclick="sweetAlit()">Hantar Permohonan</a>
+        <div class="justify-content-center">
+        <a class="btn btn-sm btn-primary mt-3 j" onclick="sweetAlit()">Hantar Permohonan</a>
+        </div>
+
 
 
     </div>
@@ -233,22 +245,22 @@
     var current_sebut_harga = 0;
 
     // options second
-    var aca_option = 
+    var aca_option =
         `<option value="ACA" >ACA - TS-1000-10</option>
         <option value="ALURTRON">ACA - TS-1000-4</option>
         <option value="BIODOSE">ACA - XLPE</option>
         <option value="BIOTEST">ACA - TS-1000-2</option>`;
-    var alurtron_option = 
+    var alurtron_option =
         `<option value="ACA" >ALURTRON - TS-1000-10</option>
         <option value="ALURTRON">ALURTRON - TS-1000-4</option>
         <option value="BIODOSE">ALURTRON - XLPE</option>
         <option value="BIOTEST">ALURTRON - TS-1000-2</option>`;
-    var biodose_option =  
+    var biodose_option =
         `<option value="ACA" >BIODOSE - TS-1000-10</option>
         <option value="ALURTRON">BIODOSE - TS-1000-4</option>
         <option value="BIODOSE">BIODOSE - XLPE</option>
         <option value="BIOTEST">BIODOSE - TS-1000-2</option>`;
-    var biotest_option =  
+    var biotest_option =
         `<option value="ACA" >BIOTEST - TS-1000-10</option>
         <option value="ALURTRON">BIOTEST - TS-1000-4</option>
         <option value="BIODOSE">BIOTEST - XLPE</option>
@@ -339,7 +351,7 @@
                         </tbody>
                     </table>`
 
-    
+
     function updateDBFirst() {
         let sebutHargaData = {};
         sebutHargaData.JenisMohon = $("select[name=JenisMohon]").val();
@@ -376,7 +388,7 @@
         sebutHargaDataItem.KuantitiProduk = $("input[name=KuantitiProduk]").val();
         sebutHargaDataItem.AmaunProduk = $("input[name=AmaunProduk]").val();
 
-       
+
         sebutHargaDataItem.SebutHargaId=current_sebut_harga;
         $.ajax({
             headers: {
@@ -410,13 +422,13 @@
 
                         $("#jumlah").val(jumlah);
                         $("#tbody2").html(table_data);
-                        
+
                     }
                 })
             }
         })
-    
-       
+
+
 
         //TODO
         //get form data
@@ -424,7 +436,7 @@
         //onsuccess (get sebutharga ID)
         // get form sebut harga item
         //$ajax call -> simpan data sebutharga item
-        //load table 
+        //load table
     }
 
     function updateSecondOption() {
@@ -444,7 +456,7 @@
         if (selected == "BIOTEST") {
             $("#second_option").html(biotest_option);
         }
-        
+
 
     }
 
@@ -465,7 +477,7 @@
         if (selected == "BIOTEST") {
             $("#second_table").html(biotest_table);
         }
-        
+
 
     }
 
@@ -493,7 +505,7 @@
 
 
     }
-   
+
 
     $("#step1").click(function() {
         $("#permohonan_step1").show();
@@ -526,6 +538,7 @@
         $("#permohonan_step3").hide();
         $("#permohonan_step4").show();
         $("#permohonan_step2").hide();
+        $("h5[name=nama_pelanggan_step2]").val(current_sebut_harga)
         updateSebutHarga();
 
     })
@@ -564,5 +577,5 @@
     }
     </script>
 
-    
+
 @endsection
