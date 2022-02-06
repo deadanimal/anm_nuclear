@@ -39,6 +39,7 @@ class SebutHargaController extends Controller
         $SebutHarga = new SebutHarga;
         $SebutHarga->JenisMohon=$request->JenisMohon;
         $SebutHarga->Nama=$request->Nama;
+        $SebutHarga->User=$request->user()->id;
         $SebutHarga->NoHP=$request->NoHP;
         $SebutHarga->Catatan=$request->Catatan;
 
@@ -52,9 +53,10 @@ class SebutHargaController extends Controller
      * @param  \App\Models\SebutHarga  $sebutHarga
      * @return \Illuminate\Http\Response
      */
-    public function show(SebutHarga $sebutHarga)
+    public function show($sebutHarga)
     {
-        //
+      $data = SebutHarga::where('id', $sebutHarga)->get();
+      return $data;
     }
 
     public function RFQ(SebutHarga $sebutHarga)

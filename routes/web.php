@@ -40,6 +40,7 @@ use App\Http\Controllers\PeruntukanPesertaController;
 
 use App\Http\Controllers\SebutHargaController;
 use App\Http\Controllers\SebutHargaItemController;
+use App\Http\Controllers\PesananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -216,7 +217,11 @@ Route::group(['prefix' => 'us-ulpk', 'middleware' => 'UlpkUrusSetia'], function 
 
 
 Route::resource('sebutharga', SebutHargaController::class);
+Route::resource('pesanan', PesananController::class);
 Route::resource('sebuthargaitem', SebutHargaItemController::class);
 Route::get('sebuthargaRFQ', [SebutHargaController::class,'RFQ']);
+Route::get('kelulusan_pesanan', [PesananController::class, 'ListviewPesanan']);
+
+
 
 require __DIR__ . '/auth.php';
