@@ -276,11 +276,11 @@
     <!-- ===============================================-->
     <main class="main" id="top">
         <div class="row">
-            <div class="col-3 mt-0 p-0" style="background-color: #009640;">
+            <div class="col-3 mt-0 p-0" style="background-color: #009640; ">
                 @include('layouts.risda-side-bar')
             </div>
-            <div class="col-9 p-0">
-                <div class="content p-5" style="background-color:white">
+            <div class="col-9 p-0" style=" box-shadow: 10px 0 5px -2px #888;">
+                <div class="content p-5" style="background-color:white;box-shadow: 10px 0 5px -2px #888;">
                     {{-- @if (session('success'))
                         <div class="alert alert-success ">
                             {{ session('success') }}

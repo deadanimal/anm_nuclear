@@ -15,6 +15,7 @@ class CreateSebutHargasTable extends Migration
     {
         Schema::create('sebut_hargas', function (Blueprint $table) {
             $table->id();
+            $table->string("User")->nullable();
             $table->string("JenisMohon")->nullable();
             $table->string("Nama")->nullable();
             $table->string("NoHp")->nullable();
