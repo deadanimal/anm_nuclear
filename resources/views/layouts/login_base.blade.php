@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>RISDA | e-Latihan</title>
+    <title>ANM | e-CLIENT</title>
 
 
     <!-- ===============================================-->
@@ -65,7 +65,7 @@
     <style>
         .nav-pills .nav-link {
             background-color: rgb(233, 233, 233);
-            color: #009640;
+            color: #2CABE1;
             border: 0;
             border-radius: 0.25rem;
         }
@@ -73,20 +73,20 @@
         .nav-pills .nav-link.active,
         .nav-pills .show>.nav-link {
             color: #fff;
-            background-color: #009640;
+            background-color: #2CABE1;
         }
 
         .text-primary {
-            color: #009640 !important;
+            color: #2CABE1 !important;
         }
 
         .form-check-input:checked {
-            background-color: #009640;
-            border-color: #009640;
+            background-color: #2CABE1;
+            border-color: #2CABE1;
         }
 
         a {
-            color: #009640;
+            color: #2CABE1;
             text-decoration: none;
         }
 
@@ -95,8 +95,8 @@
         .tox .tox-menu__footer .tox-button:last-child,
         .tox .tox-dialog__footer .tox-button:last-child {
             color: #fff;
-            background-color: #009640;
-            border-color: #009640;
+            background-color: #2CABE1 !important;
+            border-color: #2CABE1;
             -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
             box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
         }
@@ -111,8 +111,8 @@
         }
 
         .btn-outline-primary {
-            color: #009640;
-            border-color: #009640;
+            color: #2CABE1;
+            border-color: #2CABE1;
         }
 
         .btn-outline-primary:hover {
@@ -125,7 +125,7 @@
     <!--    Main Content-->
     <!-- ===============================================-->
     <main class="main" id="top">
-        <img src="/img/bg.jpeg" alt="latar" width="100%" height="100%" style="position: absolute; z-index: -1;">
+        <!-- <img src="/img/bg.jpeg" alt="latar" width="100%" height="100%" style="position: absolute; z-index: -1;"> -->
         @yield('content')
     </main>
 

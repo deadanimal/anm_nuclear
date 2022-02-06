@@ -302,7 +302,7 @@
             <div class="row p-4">
                 <div class="col">
                     <div class="text-600 text-white">
-                        Copyright © 2021 SISTEM MAKLUMAT LATIHAN (e-LATIHAN)
+                        Copyright © 2021 AGENSI NUKLEAR MALAYSIA(e-CLIENT)
                     </div>
                 </div>
             </div>

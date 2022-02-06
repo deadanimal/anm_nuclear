@@ -7,14 +7,18 @@
                     <div class="tab-pane fade show active" id="pill-tab-home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="card overflow-hidden z-index-1">
                             <div class="card-body p-0">
-                                <img src="/img/risda_logo.png" alt="logo" width="15%" class="p-3"
-                                    style="position: absolute">
+                                
                                 <div class="row g-0 h-100 d-flex flex-center">
                                     <div class="col-lg-8 d-flex flex-center">
                                         <div class="p-5 flex-grow-1">
-                                            <div class="row flex-between-center">
-                                                <div class="col-auto">
-                                                    <h3 class="text-primary">Log Masuk Pekebun Kecil</h3>
+                                            <div class="row flex-between-center text-center">
+                                                <div class="row">
+                                                    <div class="mb-3 text-center">
+                                                        <img src="/img/Logo Agensi Nuklear Malaysia.png" alt="logo" width="60%">
+                                                    </div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <h3 class="text-center">Log Masuk</h3>
                                                 </div>
                                             </div>
 
@@ -22,8 +26,7 @@
                                                 @csrf
                                                 <input type="hidden" name="pengguna" value="pk">
                                                 <div class="mb-3" id="nric">
-                                                    <label class="form-label"  >No.
-                                                        Kad Pengenalan</label>
+                                                    <label class="form-label"  >Email</label>
                                                     <input class="form-control" type="text" name="no_KP"
                                                         :value="old('no_KP')" maxlength="12" size="12"
                                                         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>

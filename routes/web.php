@@ -215,7 +215,8 @@ Route::group(['prefix' => 'us-ulpk', 'middleware' => 'UlpkUrusSetia'], function 
 // Route::post('/utiliti/lokasi/daerah/{id}/delete', [DaerahController::class, 'destroy']);
 
 
-Route::resource('sebutharga',SebutHargaController::class);
-Route::resource('sebuthargaitem',SebutHargaItemController::class);
+Route::resource('sebutharga', SebutHargaController::class);
+Route::resource('sebuthargaitem', SebutHargaItemController::class);
+Route::get('sebuthargaRFQ', [SebutHargaController::class,'RFQ']);
 
 require __DIR__ . '/auth.php';

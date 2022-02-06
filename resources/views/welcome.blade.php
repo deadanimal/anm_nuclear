@@ -6,7 +6,7 @@
             <div class="col d-flex justify-content-center text-md-start text-center flex-column">
                 <div class="row">
                     <div class="col text-center">
-                        <img src="/img/risda_logo.png" alt="logo" width="30%">
+                        <img src="/img/Logo Agensi Nuklear Malaysia.png" alt="logo" width="30%">
                     </div>
                 </div>
 

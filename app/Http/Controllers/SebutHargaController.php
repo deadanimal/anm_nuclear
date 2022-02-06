@@ -57,6 +57,12 @@ class SebutHargaController extends Controller
         //
     }
 
+    public function RFQ(SebutHarga $sebutHarga)
+    {
+        return view('sebuthargaRFQ.index');
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -66,8 +66,8 @@
         .tox .tox-menu__footer .tox-button:last-child,
         .tox .tox-dialog__footer .tox-button:last-child {
             color: #fff;
-            background-color: #009640;
-            border-color: #009640;
+            background-color: #2CABE1;
+            border-color: #2CABE1;
             -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
             box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
         }
@@ -77,19 +77,19 @@
         .tox .tox-menu__footer .tox-button:hover:last-child,
         .tox .tox-dialog__footer .tox-button:hover:last-child {
             color: #fff;
-            background-color: #0F5E31;
-            border-color: #0F5E31;
+            background-color: #144A73;
+            border-color: #144A73;
         }
 
         .btn-outline-primary {
-            color: #009640;
-            border-color: #009640;
+            color: #2CABE1;
+            border-color: #2CABE1;
         }
 
         .btn-outline-primary:hover {
             color: #fff;
-            background-color: #0F5E31;
-            border-color: #0F5E31;
+            background-color: #144A73;
+            border-color: #144A73;
         }
 
     </style>
@@ -112,7 +112,7 @@
 
                 <div class="col-6 d-none d-lg-block position-relative">
                     <div class="bg-holder"
-                        style="background-image:url(img/pokok.jpg);background-position: 50% 20%;">
+                        style="background-image:url(img/Agensi-Nuklear-Malaysia.jpeg);background-position: 50% 20%;">
                     </div>
                     <!--/.bg-holder-->
 
