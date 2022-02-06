@@ -218,5 +218,6 @@ Route::group(['prefix' => 'us-ulpk', 'middleware' => 'UlpkUrusSetia'], function 
 Route::resource('sebutharga', SebutHargaController::class);
 Route::resource('sebuthargaitem', SebutHargaItemController::class);
 Route::get('sebuthargaRFQ', [SebutHargaController::class,'RFQ']);
+Route::get('sebuthargaList', [SebutHargaController::class,'list']);
 
 require __DIR__ . '/auth.php';

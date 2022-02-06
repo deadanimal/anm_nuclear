@@ -52,16 +52,22 @@ class SebutHargaController extends Controller
      * @param  \App\Models\SebutHarga  $sebutHarga
      * @return \Illuminate\Http\Response
      */
-    public function show(SebutHarga $sebutHarga)
+    public function show($sebutHarga)
     {
-        //
+        $data = SebutHarga::where('id',$sebutHarga)->get();
+        return $data;
     }
 
     public function RFQ(SebutHarga $sebutHarga)
     {
         return view('sebuthargaRFQ.index');
-
     }
+
+    public function list(SebutHarga $sebutHarga)
+    {
+        return view('sebuthargaList.index');
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -71,7 +77,7 @@ class SebutHargaController extends Controller
      */
     public function edit(SebutHarga $sebutHarga)
     {
-        //
+        
     }
 
     /**
