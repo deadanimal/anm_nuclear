@@ -220,7 +220,9 @@ Route::resource('sebutharga', SebutHargaController::class);
 Route::resource('pesanan', PesananController::class);
 Route::resource('sebuthargaitem', SebutHargaItemController::class);
 Route::get('sebuthargaRFQ', [SebutHargaController::class,'RFQ']);
+Route::get('sebuthargaList', [SebutHargaController::class,'list']);
 Route::get('kelulusan_pesanan', [PesananController::class, 'ListviewPesanan']);
+
 
 
 

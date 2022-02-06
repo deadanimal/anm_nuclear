@@ -150,15 +150,15 @@
                 </div>
             </div>
             <div class="row col-sm-2 mt-3 ">
-            <button class="btn btn-sm btn-primary" type="button" onclick="updateDB()">
-                <i class="fas fa-plus"></i> TAMBAH
-            </button>
+                <button class="btn btn-sm btn-primary" type="button" onclick="updateDB()">
+                    <i class="fas fa-plus"></i> TAMBAH
+                </button>
             </div>
         </form>
         <div class="row mt-3 justify-content-center">
-                <div class="card" id="target_table">
+            <div class="card" id="target_table">
                 <div id="item_added_table" class="card-body p-2">
-                <table id="infoTable2" class="table table-fixed table-condensed">
+                    <table id="infoTable2" class="table table-fixed table-condensed">
                         <thead>
                         <tr>
                             <th class="col-xs-1">BIL.</th>
@@ -170,14 +170,14 @@
                         </thead>
                         <tbody id="tbody2">
                         </tbody>
-                </table>
+                    </table>
                 <input class="form-control" id="jumlah" value="" readonly>
-                </div>
-                </div>
             </div>
-            <div class="row col-sm-2 mt-3 ">
+        </div>
+            </div>
+        <div class="row col-sm-2 mt-3 ">
             <a id="step3" class="risda-dg btn btn-sm btn-primary">SETERUSNYA</a>
-            </div>
+        </div>
     </div>
 
     <div id="permohonan_step3" style="display: none;">
@@ -221,7 +221,8 @@
 
     <div id="permohonan_step4" style="display: none;">
         <div id="penampalan"></div>
-        <input name="catatanAttachment" value="">
+        <textarea name="catatanAttachment" class="form-control" id="" disable="true" rows="3"></textarea>
+        <!-- <input name="catatanAttachment" value=""> -->
         <a class="btn btn-sm btn-primary" onclick="sweetAlit()">Hantar Permohonan</a>
 
 
@@ -233,25 +234,25 @@
 
     // options second
     var aca_option = 
-        `<option value="ACA" >ACA - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">ACA - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">ACA - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">ACA - MAKMAL BIOTEST</option>`;
+        `<option value="ACA" >ACA - TS-1000-10</option>
+        <option value="ALURTRON">ACA - TS-1000-4</option>
+        <option value="BIODOSE">ACA - XLPE</option>
+        <option value="BIOTEST">ACA - TS-1000-2</option>`;
     var alurtron_option = 
-        `<option value="ACA" >ALURTRON - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">ALURTRON - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">ALURTRON - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">ALURTRON - MAKMAL BIOTEST</option>`;
+        `<option value="ACA" >ALURTRON - TS-1000-10</option>
+        <option value="ALURTRON">ALURTRON - TS-1000-4</option>
+        <option value="BIODOSE">ALURTRON - XLPE</option>
+        <option value="BIOTEST">ALURTRON - TS-1000-2</option>`;
     var biodose_option =  
-        `<option value="ACA" >BIODOSE - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">BIODOSE - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">BIODOSE - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">BIODOSE - MAKMAL BIOTEST</option>`;
+        `<option value="ACA" >BIODOSE - TS-1000-10</option>
+        <option value="ALURTRON">BIODOSE - TS-1000-4</option>
+        <option value="BIODOSE">BIODOSE - XLPE</option>
+        <option value="BIOTEST">BIODOSE - TS-1000-2</option>`;
     var biotest_option =  
-        `<option value="ACA" >BIOTEST - MAKMA APLIKASI KIMIA ANALISIS</option>
-        <option value="ALURTRON">BIOTEST - LOJI PENYIARAN ALURTRON</option>
-        <option value="BIODOSE">BIOTEST - MAKMAL BIODOSE</option>
-        <option value="BIOTEST">BIOTEST - MAKMAL BIOTEST</option>`;
+        `<option value="ACA" >BIOTEST - TS-1000-10</option>
+        <option value="ALURTRON">BIOTEST - TS-1000-4</option>
+        <option value="BIODOSE">BIOTEST - XLPE</option>
+        <option value="BIOTEST">BIOTEST - TS-1000-2</option>`;
 
     // option table
 
@@ -269,8 +270,8 @@
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">1.</td>
-                            <td class="col-xs-3" name="NamaProduk">TS-1000-10</td>
-                            <td class="col-xs-6">0.12/meter </td>
+                            <td class="col-xs-3" ><input hidden="true" name="NamaProduk" value="TS-1000-10">TS-1000-10</td>
+                            <td class="col-xs-6"><input hidden="true" name="AmaunProduk" value="0.12">0.12/meter </td>
                             <td class="col-xs-6">Outer Diameter: 6.4mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
 
@@ -290,8 +291,8 @@
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">2.</td>
-                            <td class="col-xs-3" name="NamaProduk">TS-1000-4</td>
-                            <td class="col-xs-6">0.14/meter </td>
+                            <td class="col-xs-3" ><input hidden="true" name="NamaProduk" value="TS-1000-4">TS-1000-4</td>
+                            <td class="col-xs-6"><input hidden="true" name="AmaunProduk" value="0.14">0.14/meter </td>
                             <td class="col-xs-6">Outer Diameter: 9.5mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
                         </tr>
@@ -310,8 +311,8 @@
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">3.</td>
-                            <td class="col-xs-3" name="NamaProduk">XLPE</td>
-                            <td class="col-xs-6">0.16/meter </td>
+                            <td class="col-xs-3"><input hidden="true" name="NamaProduk" value="XLPE">XLPE</td>
+                            <td class="col-xs-6"><input hidden="true" name="AmaunProduk" value="0.16">0.16/meter </td>
                             <td class="col-xs-6">Hot Water Pipe: 10mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
                         </tr>
@@ -330,8 +331,8 @@
                         <tbody>
                         <tr class="clickableRow">
                             <td class="col-xs-1">1.</td>
-                            <td class="col-xs-3" ><input name="NamaProduk" disabled="true" value="TS-1000-10"></td>
-                            <td class="col-xs-6"><input name="AmaunProduk" disabled="true" value="0.12">/meter</td>
+                            <td class="col-xs-3" ><input name="NamaProduk" style="border:0;" disabled="true" hidden="true" value="TS-1000-10">TS-1000-2</td>
+                            <td class="col-xs-6"><input name="AmaunProduk" disabled="true" hidden="true" value="0.12">0.12/meter</td>
                             <td class="col-xs-6">Outer Diameter: 6.4mm</td>
                             <td class="col-xs-6"><input name="KuantitiProduk" class="form-control"></td>
                         </tr>
@@ -345,6 +346,7 @@
         sebutHargaData.Nama = $("input[name=Nama]").val();
         sebutHargaData.NoHP = $("input[name=NoHP]").val();
         sebutHargaData.Catatan = $("input[name=Catatan]").val();
+        sebutHargaData.status = 'baru';
 
         $.ajax({
             headers: {

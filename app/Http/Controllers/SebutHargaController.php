@@ -55,15 +55,20 @@ class SebutHargaController extends Controller
      */
     public function show($sebutHarga)
     {
-      $data = SebutHarga::where('id', $sebutHarga)->get();
-      return $data;
+        $data = SebutHarga::where('id',$sebutHarga)->get();
+        return $data;
     }
 
     public function RFQ(SebutHarga $sebutHarga)
     {
         return view('sebuthargaRFQ.index');
-
     }
+
+    public function list(SebutHarga $sebutHarga)
+    {
+        return view('sebuthargaList.index');
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -73,7 +78,7 @@ class SebutHargaController extends Controller
      */
     public function edit(SebutHarga $sebutHarga)
     {
-        //
+        
     }
 
     /**
