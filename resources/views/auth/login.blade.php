@@ -27,9 +27,7 @@
                                                 <input type="hidden" name="pengguna" value="pk">
                                                 <div class="mb-3" id="nric">
                                                     <label class="form-label"  >Email</label>
-                                                    <input class="form-control" type="text" name="no_KP"
-                                                        :value="old('no_KP')" maxlength="12" size="12"
-                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
+                                                    <input class="form-control" type="text" name="no_KP"/>
                                                 </div>
                                                 <div class="mb-3" id="emel" style="display:none">
                                                     <label class="form-label"  >E-mel</label>
