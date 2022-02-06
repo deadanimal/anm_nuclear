@@ -4,13 +4,13 @@
         <div class="row justify-content-center g-0">
             <div class="col-lg-9">
                 <div class="col d-flex justify-content-center text-md-start text-center flex-column">
-                    <div class="row">
-                        <div class="col text-center">
-                            <img src="/img/risda_logo.png" alt="logo" width="30%">
-                        </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <img src="/img/Logo Agensi Nuklear Malaysia.png" alt="logo" width="30%">
                     </div>
-                    <h1 class="text-center mb-0">SISTEM MAKLUMAT LATIHAN</h1>
-                    <p class="text-center"><em>(e-LATIHAN)</em></p>
+                </div>
+                    <h1 class="text-center mb-0">AGENSI NUKLEAR MALAYSIA</h1>
+                    <p class="text-center"><em>(e-CLIENT)</em></p>
                     <div class="row">
                         <div class="col text-center">
                             <form action="/semak_nric" method="POST">
