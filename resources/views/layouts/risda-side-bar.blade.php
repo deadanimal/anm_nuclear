@@ -15,7 +15,7 @@
         color: white;
     }
 
-    
+
 
     .nav-link-text.active {
         color: white;
@@ -27,7 +27,7 @@
 <div class="ml-5 bg-white " style="height:100%" >
     <ul class="navbar-nav flex-column " id="navbarVerticalNav">
         <div class="row">
-            <div class="col ml-5">        
+            <div class="col ml-5">
             <div class="row ml-5 p-4 risda-side text-center">
                 <h5 class="text-white">Selamat Datang!</h5>
                 <div class="col ">
@@ -90,7 +90,7 @@
                         <a class="nav-link {{ Request::is('pengurusan_kursus/*') ? 'active' : '' }} py-0"
                             href="/sebuthargaList">
                             <div class="d-flex align-items-center nav-link-side text-black">
-                                SENARAI SEBUTHARGA 
+                                SENARAI SEBUTHARGA
                             </div>
                         </a>
                     </li>
@@ -112,27 +112,10 @@
                     </li> -->
                 </ul>
 
-
                     <a class="nav-link py-0 dropdown-indicator" href="#utiliti" role="button" data-bs-toggle="collapse"
                         aria-expanded="{{ Request::is('utiliti/*') ? 'true' : 'false' }}" aria-controls="utiliti">
                         <div class="d-flex align-items-center nav-link-side px-0 text-black">
-                           PESANAN 
-                        </div>
-                    </a>
-                    <ul class="nav-item collapse {{ Request::is('utiliti/*') ? 'show' : 'false' }} my-1" id="utiliti">
-                        <li class="nav-item">
-                            <a class="nav-link py-0 " href="/pesanan">
-                                <div class="d-flex align-items-center nav-link-side">
-                                    <span class="px-0 text-black">JANA PESANAN</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <a class="nav-link py-0 dropdown-indicator" href="#utiliti" role="button" data-bs-toggle="collapse"
-                        aria-expanded="{{ Request::is('utiliti/*') ? 'true' : 'false' }}" aria-controls="utiliti">
-                        <div class="d-flex align-items-center nav-link-side px-0 text-black">
-                           PESANAN 
+                           PESANAN
                         </div>
                     </a>
                     <ul class="nav-item collapse {{ Request::is('utiliti/*') ? 'show' : 'false' }} my-1" id="utiliti">
