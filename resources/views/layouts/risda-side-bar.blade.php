@@ -60,8 +60,6 @@
                     </div>
                 </a>
 
-
-<<<<<<< HEAD
                 <a class="nav-link py-0 dropdown-indicator" href="#pengurusan_kursus" role="button"
                     data-bs-toggle="collapse"
                     aria-expanded="{{ Request::is('pengurusan_kursus/*') ? 'true' : 'false' }}"
@@ -114,8 +112,23 @@
                     </li> -->
                 </ul>
 
-                    
-=======
+
+                    <a class="nav-link py-0 dropdown-indicator" href="#utiliti" role="button" data-bs-toggle="collapse"
+                        aria-expanded="{{ Request::is('utiliti/*') ? 'true' : 'false' }}" aria-controls="utiliti">
+                        <div class="d-flex align-items-center nav-link-side px-0 text-black">
+                           PESANAN 
+                        </div>
+                    </a>
+                    <ul class="nav-item collapse {{ Request::is('utiliti/*') ? 'show' : 'false' }} my-1" id="utiliti">
+                        <li class="nav-item">
+                            <a class="nav-link py-0 " href="/pesanan">
+                                <div class="d-flex align-items-center nav-link-side">
+                                    <span class="px-0 text-black">JANA PESANAN</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
                     <a class="nav-link py-0 dropdown-indicator" href="#utiliti" role="button" data-bs-toggle="collapse"
                         aria-expanded="{{ Request::is('utiliti/*') ? 'true' : 'false' }}" aria-controls="utiliti">
                         <div class="d-flex align-items-center nav-link-side px-0 text-black">
@@ -137,6 +150,7 @@
                                 </div>
                             </a>
                         </li>
+
 
                        <!-- <li class="nav-item">
                             <a class="nav-link py-0" href="#kumpulan" role="button" data-bs-toggle="collapse"
@@ -329,7 +343,7 @@
                         </li> -->
                     </ul>
                 @endif
->>>>>>> f938d295182ee49e1922ad2cc6abca7666bb033c
+
 
             </li>
         </div>

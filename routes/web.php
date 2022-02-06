@@ -220,12 +220,10 @@ Route::resource('sebutharga', SebutHargaController::class);
 Route::resource('pesanan', PesananController::class);
 Route::resource('sebuthargaitem', SebutHargaItemController::class);
 Route::get('sebuthargaRFQ', [SebutHargaController::class,'RFQ']);
-<<<<<<< HEAD
 Route::get('sebuthargaList', [SebutHargaController::class,'list']);
-=======
 Route::get('kelulusan_pesanan', [PesananController::class, 'ListviewPesanan']);
 
 
->>>>>>> f938d295182ee49e1922ad2cc6abca7666bb033c
+
 
 require __DIR__ . '/auth.php';
