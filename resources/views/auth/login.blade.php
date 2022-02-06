@@ -27,12 +27,9 @@
                                                 <input type="hidden" name="pengguna" value="pk">
                                                 <div class="mb-3" id="nric">
                                                     <label class="form-label"  >Email</label>
-                                                    <input class="form-control" type="text" name="no_KP"/>
-                                                </div>
-                                                <div class="mb-3" id="emel" style="display:none">
-                                                    <label class="form-label"  >E-mel</label>
-                                                    <input class="form-control" type="email" name="email"
-                                                        :value="old('email')" autofocus />
+                                                    <input class="form-control" type="text" name="email"
+                                                         maxlength="50" size="12"
+                                                        />
                                                 </div>
                                                 <div class="mb-3">
                                                     <div class="d-flex justify-content-between">
