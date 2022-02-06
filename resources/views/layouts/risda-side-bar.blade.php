@@ -60,7 +60,6 @@
                     </div>
                 </a>
 
-                @if (Auth::user()->jenis_pengguna != 'Peserta ULPK')
                     <a class="nav-link py-0 dropdown-indicator" href="#pengurusan_kursus" role="button"
                         data-bs-toggle="collapse"
                         aria-expanded="{{ Request::is('pengurusan_kursus/*') ? 'true' : 'false' }}"
@@ -325,7 +324,6 @@
                             </ul>
                         </li> -->
                     </ul>
-                @endif
 
             </li>
         </div>
