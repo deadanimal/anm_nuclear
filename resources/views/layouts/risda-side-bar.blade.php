@@ -28,7 +28,7 @@
     <ul class="navbar-nav flex-column " id="navbarVerticalNav">
         <div class="row">
             <div class="col ml-5">        
-            <div class="row ml-5 p-4 risda-side">
+            <div class="row ml-5 p-4 risda-side text-center">
                 <h5 class="text-white">Selamat Datang!</h5>
                 <div class="col ">
                     @if (Auth::user()->gambar_profil == null)
@@ -39,6 +39,7 @@
                             style="border-radius: 25px; border: 2px solid #73AD21; width:54px; height:54px; object-fit: cover;">
                     @endif
                     <h3 class="h5 text-white"><strong>{{ Auth::user()->name }}</strong></h3>
+                    <a href="/logout" class="btn btn-sm btn-primary risda-dg">LOG KELUAR</a>
                 </div>
             </div>
         </div>
